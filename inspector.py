@@ -111,6 +111,8 @@ class scanBroker():
     def finalizeScan(self):
         print('Finalizing scan and writing json report...')
         now = datetime.now().strftime("%Y%m%d%H%M%S")
+        if os.path.exists('reports') == False:
+            os.mkdir('reports')
         jsonFileOut = open('reports/{}.json'.format(now),'w')
         jsonFileOut.write(json.dumps(self.accumulator.resources,
                           sort_keys=True,
