@@ -18,7 +18,7 @@ class resourceAccumulator():
         self.resources[parent]['input'] = []
         self.resources[parent]['hidden'] = []
         self.resources[parent]['href'] = []
-        self.resources[parent]['session'] = {}
+        self.resources[parent]['session'] = []
     
     def addResources(self,category,resources,parent):
         for webItem in resources:
